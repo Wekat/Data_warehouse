@@ -1,0 +1,94 @@
+
+$Lilac: #9C69E2;
+$Pink_background: rgba(240, 99, 184, 0.15);
+$Pink: #F063B8;
+$heading_color: #212353;
+$text_color: #4B5D68;
+
+@use 'fonts';
+
+%button {
+    width: 170px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    padding: 16px 37px 15px 37px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+%button_link {
+    @extend %button;
+    width: 210px;
+    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+    padding: 17px 29px;
+    font-style: normal;
+    font-size: 16px;
+    justify-content: space-between;
+    letter-spacing: 0.005em;
+    background: #FFFFFF;
+    color: $heading_color;
+
+    &:hover {
+        background: $Pink;
+        box-shadow: none;
+        transform: scale(1.2);
+    }
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
+    font-family: fonts.$main_font;
+    padding-top: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    max-width: 1120px;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.nav {
+    max-width: 490px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav__items {
+        max-width: 320px;
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & a {
+            color: $text_color;
+
+            &:hover {
+                font-weight: 700;
+                color: $heading_color;
+            }
+        }
+    }
+}
+
+.header__button {
+    @extend %button_link
+}
