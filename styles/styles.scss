@@ -53,6 +53,18 @@ a {
     }
 }
 
+%paragraph_text {
+    font-family: fonts.$main_font;
+    color: $text_color;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    padding-bottom: 7vh;
+    max-width: 380px;
+    width: 100%;
+}
+
 .header {
     max-width: 1120px;
     width: 100%;
@@ -94,18 +106,13 @@ a {
     @extend %button_link
 }
 
-.section {
-    width: 100vw;
-    padding-top: 10vh;
-    position: relative;
-}
-
 .section_container {
     max-width: 1120px;
     width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    padding-top: 15vh;
 
     &__item_1 {
         min-width: 645px;
@@ -122,15 +129,7 @@ a {
         }
 
         & p {
-            font-family: fonts.$main_font;
-            color: $text_color;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 160%;
-            padding-bottom: 7vh;
-            max-width: 380px;
-            width: 100%;
+            @extend %paragraph_text
         }
 
         & button {
@@ -145,9 +144,9 @@ a {
 
         & img {
             max-width: 885px;
-            width: 885 / 1600 * 100%;
+            width: 165%;
             position: absolute;
-            bottom: 0%;
+            bottom: -20%;
             right: -15%;
         }
     }
@@ -157,7 +156,7 @@ a {
     max-width: 1120px;
     width: 100%;
     margin: auto;
-    padding-top: 20vh;
+    padding-top: 25vh;
 
     &__items {
         width: 100%;
@@ -187,6 +186,12 @@ a {
             font-size: 40px;
             line-height: 130%;
             color: $heading_color;
+        }
+
+        & p {
+            @extend %paragraph_text;
+            padding-top: 40px;
+            padding-bottom: 0;
         }
     }
 }
