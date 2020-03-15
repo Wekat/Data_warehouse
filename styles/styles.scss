@@ -7,7 +7,20 @@ $text_color: #4B5D68;
 
 @use 'fonts';
 
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
+    font-family: fonts.$main_font;
+    padding-top: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
 %button {
+    font-family: fonts.$main_font;
     width: 170px;
     height: 60px;
     border-radius: 50px;
@@ -19,6 +32,7 @@ $text_color: #4B5D68;
     display: flex;
     align-items: center;
     text-align: center;
+    background-color: $Lilac;
     color: #FFFFFF;
 }
 
@@ -41,26 +55,15 @@ $text_color: #4B5D68;
     }
 }
 
-body {
-    height: 100vh;
-    background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
-    font-family: fonts.$main_font;
-    padding-top: 60px;
-}
-
-a {
-    text-decoration: none;
-}
-
 .header {
     max-width: 1120px;
     width: 100%;
+    margin: auto;
     height: 60px;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
 }
 
 .nav {
@@ -89,6 +92,59 @@ a {
     }
 }
 
-.header__button {
+.button_link {
     @extend %button_link
+}
+
+.section {
+    max-width: 1120px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10vh;
+
+    &__item_1 {
+        min-width: 645px;
+        width: 100%;
+
+        & h1 {
+            font-family: fonts.$heading_font;
+            color: $heading_color;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 80px;
+            line-height: 110%;
+            padding-bottom: 7vh;
+        }
+
+        & p {
+            font-family: fonts.$main_font;
+            color: $text_color;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 160%;
+            padding-bottom: 7vh;
+            max-width: 380px;
+            width: 100%;
+        }
+
+        & button {
+            @extend %button
+        }
+    }
+
+    &__item_2 {
+        max-width: 475px;
+        width: 100%;
+        position: relative;
+
+        & img {
+            max-width: 885px;
+            position: absolute;
+            top: 100px;
+            left: -280px;
+        }
+    }
 }
