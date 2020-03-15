@@ -129,11 +129,11 @@ a {
         }
 
         & p {
-            @extend %paragraph_text
+            @extend %paragraph_text;
         }
 
         & button {
-            @extend %button
+            @extend %button;
         }
     }
 
@@ -144,7 +144,7 @@ a {
 
         & img {
             max-width: 885px;
-            width: 165%;
+            width: 60vw;
             position: absolute;
             bottom: -20%;
             right: -15%;
@@ -160,12 +160,13 @@ a {
 
     &__items {
         width: 100%;
-        height: 560px;
+        min-height: 560px;
         background: rgba(240, 99, 184, 0.15);
         border-radius: 50px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     &__img {
@@ -192,6 +193,40 @@ a {
             @extend %paragraph_text;
             padding-top: 40px;
             padding-bottom: 0;
+        }
+    }
+}
+
+.features_section {
+    @extend .pink_section;
+
+    &_top {
+        text-align: center;
+
+        & h2 {
+            font-family: fonts.$heading_font;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 130%;
+            color: $heading_color;
+        }
+
+        & p {
+            @extend %paragraph_text;
+            padding-top: 40px;
+            max-width: 584px;
+            width: 100%;
+        }
+    }
+
+    ._bottom {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &__item {
+            
         }
     }
 }
