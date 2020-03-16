@@ -447,7 +447,7 @@ a {
         padding-top: 15%;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: baseline;
         flex-wrap: wrap;
 
         &--left {
@@ -487,7 +487,6 @@ a {
                 color: $heading_color;
                 font-weight: 400;
                 font-size: 16px;
-                width: 100px;
                 padding: 0;
             }
         }
@@ -496,7 +495,36 @@ a {
             width: 310px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(7, 1fr);
+            grid-template-rows: 1fr 30px 1fr 1fr 1fr 1fr 1fr;
+
+            & a {
+                font-family: fonts.$main_font;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 250%;
+                color: $heading_color;
+
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        &--right {
+            width: 310px;
+
+            &_img {
+                margin-top: 30px;
+                
+                & img {
+                    padding-right: 14px;
+
+                    &:last-of-type {
+                        padding-right: 0;
+                    }
+                }
+            }
         }
     }
 }
@@ -547,5 +575,13 @@ a {
 
 .item11 {
     grid-area: 7 / 2 / 8 / 3;
+}
+
+h6 {
+    font-family: fonts.$main_font;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    color: $heading_color;
 }
 
