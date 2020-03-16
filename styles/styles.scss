@@ -76,15 +76,13 @@ a {
 
 .header {
     max-width: 1120px;
-    width: 100%;
+    width: 90%;
     margin: auto;
     height: 60px;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 .nav {
@@ -119,18 +117,17 @@ a {
 }
 
 .button_link {
-    @extend %button_link
+    @extend %button_link;
+    margin: 5px;
 }
 
 .section_container {
     max-width: 1120px;
-    width: 100%;
+    width: 90%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     padding-top: 15vh;
-    padding-left: 10px;
-    padding-right: 10px;
 
     &__item_1 {
         max-width: 645px;
@@ -141,7 +138,7 @@ a {
             color: $heading_color;
             font-style: normal;
             font-weight: bold;
-            font-size: 80px;
+            font-size: 79px;
             line-height: 110%;
             padding-bottom: 7vh;
         }
@@ -172,18 +169,15 @@ a {
 
 .pink_section {
     max-width: 1120px;
-    width: 100%;
+    width: 90%;
     margin: auto;
-    padding-top: 25vh;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 20%;
 
     &__items {
         width: 100%;
         min-height: 560px;
         background: rgba(240, 99, 184, 0.15);
         border-radius: 50px;
-        padding: 20px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -193,15 +187,17 @@ a {
     &__img {
         max-width: 477px;
         width: 100%;
+        margin: auto;
 
         & img {
-            width: 100%;
+            width: 90%;
         }
     }
 
     &__text {
         max-width: 475px;
-        width: 100%;
+        width: 90%;
+        padding-bottom: 20px;
 
         & h2 {
             font-family: fonts.$heading_font;
@@ -356,6 +352,7 @@ a {
 
         &_box {
             max-width: 645px;
+            width: 90%;
             margin: auto;
             margin-top: 8%;
             min-height: 330px;
@@ -365,7 +362,7 @@ a {
 
             &_flex {
                 max-width: 505px;
-                width: 100%;
+                width: 90%;
                 min-height: 220px;
                 height: 100%;
                 margin: auto;
@@ -415,16 +412,16 @@ a {
 }
 
 .section_bottom {
+    max-width: 1120px;
     width: 100%;
     border-top: 2px solid $Lilac;
+    margin: auto;
 
     &__header {
         max-width: 1120px;
-        width: 100%;
+        width: 90%;
         margin: auto;
         padding-top: 15%;
-        padding-left: 10px;
-        padding-right: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -445,6 +442,7 @@ a {
             & p {
                 @extend %paragraph_text;
                 padding-top: 20px;
+                padding-bottom: 0;
             }
         }
 
@@ -459,11 +457,9 @@ a {
 
     &__mid {
         max-width: 1120px;
-        width: 100%;
+        width: 90%;
         margin: auto;
         padding-top: 15%;
-        padding-left: 10px;
-        padding-right: 10px;
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -545,12 +541,11 @@ a {
 
     &__bottom {
         max-width: 1120px;
+        width: 90%;
         height: 50px;
         margin: auto;
         margin-top: 90px;
         margin-bottom: 90px;
-        padding-left: 10px;
-        padding-right: 10px;
 
         & p {
             font-family: fonts.$main_font;
@@ -566,7 +561,7 @@ a {
 
 .button_learn {
     @extend %button;
-    margin-top: 10px;
+    margin: 5px;
 }
 
 .item1 {
@@ -648,5 +643,13 @@ h6 {
 @media screen and (max-width: 1044px) {
     .section_container__item_1 h1 {
         font-size: 65px;
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .features_section_bottom {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
