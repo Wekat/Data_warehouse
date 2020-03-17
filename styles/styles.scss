@@ -268,9 +268,9 @@ a {
         &__text {
             max-width: 220px;
             width: 100%;
-            max-height: 276px;
-            height: 100%;
-            padding-left: 30px;
+            min-height: 276px;
+            height: 80%;
+            margin-left: 30px;
 
             & h3 {
                 font-family: fonts.$heading_font;
