@@ -271,6 +271,7 @@ a {
             min-height: 276px;
             height: 80%;
             margin-left: 30px;
+            margin-right: 20px;
 
             & h3 {
                 font-family: fonts.$heading_font;
@@ -285,6 +286,7 @@ a {
                 @extend %paragraph_text;
                 font-size: 16px;
                 padding-bottom: 20px;
+                padding-top: 15px;
             }
 
             &--p_link {
@@ -412,7 +414,6 @@ a {
 }
 
 .section_bottom {
-    max-width: 1120px;
     width: 100%;
     border-top: 2px solid $Lilac;
     margin: auto;
@@ -427,8 +428,9 @@ a {
         align-items: center;
 
         &--left {
-            max-width: 320px;
+            min-width: 320px;
             width: 100%;
+            margin-right: 20px;
 
             & h2 {
                 font-family: fonts.$heading_font;
@@ -443,6 +445,7 @@ a {
                 @extend %paragraph_text;
                 padding-top: 20px;
                 padding-bottom: 0;
+                width: 100%;
             }
         }
 
@@ -616,6 +619,40 @@ h6 {
     color: $heading_color;
 }
 
+@media screen and (max-width: 480px) {
+    .item_1 {
+        background: rgb(104, 201, 186, 0.1);
+        border-radius: 50px;
+    }
+
+    .item_2 {
+        background: rgb(156, 105, 226, 0.1);
+        border-radius: 50px;
+    }
+
+    .item_3 {
+        background: rgb(240, 99, 184, 0.1);
+        border-radius: 50px;
+    }
+
+    .item_4 {
+        background: rgb(45, 156, 219, 0.1);
+        border-radius: 50px;
+    }
+
+    .features_section_bottom__text h3 {
+        font-size: 20px;
+    }
+
+    .features_section_bottom__text p {
+        font-size: 12px;
+    }
+
+    .features_section_bottom__text--p_link {
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .header {
         flex-wrap: wrap;
@@ -637,6 +674,23 @@ h6 {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .section_bottom__header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &--left {
+            text-align: center;
+
+            & p {
+                display: inline-block;
+                margin-bottom: 30px;
+            }
+        }
     }
 }
 
